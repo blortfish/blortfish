@@ -1,0 +1,218 @@
+{
+  "displayName": "Daddy King",
+  "email": "hmm5837@rit.edu",
+  "p": [
+    "768ff5a7d5ea9292fabe0a5e78829874b3577881",
+    "64b19d527efd2a5826e86af796a01e1e42732066",
+    "5df8db9846ca0e0028ac146545a750123a9e4aef"
+  ],
+  "createdAt": "2014-12-22T14:27:32.316Z",
+  "updatedAt": "2014-12-26T03:58:30.725Z",
+  "_id": ObjectId(
+  "54982a544a9a94d61db6e6a3"
+  )
+},
+{
+"_id": ObjectId("54982a604a9a94d61db6e6a4",
+"displayName": "Dan",
+"email": "def6054@rit.edu",
+"p": [
+"057da634ca2295e027cb760f96bffa42a94518fa",
+"50f9dd5ed87baa8492b306ece817e7891243fe8e",
+"3c0ce9377a5e2732968dec4feef73d3e98c28dcc"
+],
+"createdAt": "2014-12-22T14:27:44.102Z",
+"updatedAt": "2015-01-31T16:52:23.504Z")
+},
+{
+"_id": ObjectId("54982a664a9a94d61db6e6a5",
+"displayName": "Peanut Butter Princess",
+"email": "michaelbush5@gmail.com",
+"p": [
+"9fb9809b92f638fcf2adb2769770874c78c18b01",
+"3db1f05f54f96ca437d8b48bfabe2f9f100ea2ff",
+"a6f99b0154d13f876669bb452605481f548c1cd7"
+],
+"createdAt": "2014-12-22T14:27:50.930Z",
+"updatedAt": "2015-03-07T23:52:29.780Z")
+},
+{
+"displayName": "teeknow",
+"email": "sderico6@gmail.com",
+"p": [
+"a7835074594b1a538d4ead40eb23db21bececa41",
+"e7c84a47f91d85f5969ea09d64cd5442cbed57a5",
+"cd484cf1c76038600a2524a7069aeb8a8b40c4fe"
+],
+"createdAt": "2014-12-22T14:27:58.502Z",
+"updatedAt": "2015-01-09T16:44:41.248Z",
+"_id" : ObjectId("54982a6e4a9a94d61db6e6a6")
+},
+{
+"email": "kivo360@gmail.com",
+"p": [
+"07573fb3facf0db011c927bbe0cd65460f82f597",
+"16837eec1e57275bd749fac1dfe989b114610923",
+"cde463d1fc81353e081e8f95d55b20a45727a722"
+],
+"displayName": "kivo360",
+"createdAt": "2014-12-24T19:10:43.771Z",
+"updatedAt" : "2015-10-02T14:54:18.405Z",
+"_id": ObjectId("549b0fb3504a377d30f39410")
+},
+{
+"email": "sophiacalderone@yahoo.com",
+"p": [
+"2389314ae69d2cffd52ab004479bbff0b4b7ee70",
+"b88f92eca623c0b2d0501722b84d9f060eea327e",
+"b03d7b5dc03d3a8f0bdc506f97f229db1bf4fc77"
+],
+"displayName": "Feee",
+"createdAt": "2014-12-25T00:22:41.864Z",
+"updatedAt" : "2015-05-18T20:56:29.326Z",
+"_id": ObjectId("549b58d1504a377d30f39417")
+},
+{
+"email": "camilleali795@gmail.com",
+"p": [
+"462b3f9fdadb95a9ef934976325091b1e5be52d3",
+"6d04fd6b4215b58b40a159e805215ef107878508",
+"522fd7abd6ed186895d06f1c571ba7e195b8803c"
+],
+"displayName": "Camille",
+"createdAt": "2015-01-20T18:15:57.618Z",
+"updatedAt" : "2015-01-20T18:15:57.618Z",
+"_id": ObjectId("54be9b5d045c6d291d510c6d")
+},
+{
+"email": "lisa.johnson72@gmail.com",
+"p": [
+"e3aefc06163f3d097792dd6a2c21441c66714f8b",
+"dff95e901363d031725ff1825f12467fc74732d6",
+"f7dbc8ec0553293a006f49e67da07a0fe87ea0ac"
+],
+"displayName": "Lisa",
+"createdAt": "2015-03-06T05:14:19.397Z",
+"updatedAt" : "2015-03-06T05:14:19.397Z",
+"_id": ObjectId("54f937abfeeeb9fc216e7e79")
+},
+{
+"email": "ajr2955@rit.edu",
+"p": [
+"8dfc17de7aa61a59dd03658296408f98bcc3a765",
+"fd28c689a020f75c4b5c2ed64e1c050dd672de9e",
+"d49bcceadf2795c0a78d2f92f60fa03fba011ecf"
+],
+"displayName": "Anthony",
+"createdAt": "2015-03-27T02:49:56.765Z",
+"updatedAt" : "2015-03-27T02:54:47.511Z",
+"_id": ObjectId("5514c554feeeb9fc216e7ea1")
+},
+{
+"email": "kflint530@gmail.com",
+"p": [
+"7f951565bed32ed11ab9a94100f3e17c7701d5ee",
+"cd5f4f54822502c87f5f3b53810c553944b0ef79",
+"90ebeef3ba02d0760b92cd6254544228501f019d"
+],
+"displayName": "kflint530",
+"createdAt": "2015-07-08T20:58:43.552Z",
+"updatedAt" : "2015-07-08T20:58:43.552Z",
+"_id": ObjectId("559d8f039c01e2411f168b37")
+},
+{
+"email": "victorwu89@gmail.com",
+"p": [
+"388e86a36b928446979c1f9c7eaabf4ff81b90e2",
+"0e6587f32d3e2f6d9634f665ac9923c7e2170e4d",
+"5692d37c7961502ada82c5c1fcfd9ee9100119fa"
+],
+"displayName": "SquattingDick",
+"createdAt": "2015-08-24T14:25:14.507Z",
+"updatedAt" : "2015-08-24T14:25:14.507Z",
+"_id": ObjectId("55db294a9c01e2411f168b79")
+},
+{
+"email": "kah3725@rit.edu",
+"p": [
+"6e10025226a0b2002910889b1d7b482cc6f6059b",
+"ee8e621af38cb1e093a1edd9b3ef249c5bddb73c",
+"7dbc668fc0df2e2f99b091fe806c11a75c1c7b7e"
+],
+"displayName": "kdog",
+"createdAt": "2015-10-09T14:39:53.322Z",
+"updatedAt" : "2015-10-09T14:39:53.322Z",
+"_id": ObjectId("5617d1b926496f29106f4c7a")
+},
+{
+"email": "kah.kevin.hill@gmail.com",
+"p": [
+"bc953071bd1eafafe1b57fa770a19e744c25e326",
+"2707e395a1b7c0c49c32552312c0d5374464bc39",
+"30bae08c4cd4033cca6bdf000cb6fb3d6891ce7f"
+],
+"displayName": "Khilljoy",
+"createdAt": "2016-02-05T18:12:24.397Z",
+"updatedAt" : "2016-02-05T18:12:24.397Z",
+"_id": ObjectId("56b4e6085a5b6a2f6a38f72b")
+},
+{
+"email": "cec7866@rit.edu",
+"p": [
+"ad710047651d8eb397b9ce9d1a450ebd56d0edbd",
+"06425173b0bee47952c4298bbbce9d8462249aa5",
+"a185e18d005a7eb14470e3f33cc569b1bbf0c765"
+],
+"displayName": "Kevin",
+"createdAt": "2016-02-26T01:03:48.304Z",
+"updatedAt" : "2016-02-26T01:03:48.304Z",
+"_id": ObjectId("56cfa474632925492c907657")
+},
+{
+"email": "cpa5399@rit.edu",
+"p": [
+"5b394bb64013643a3c6a5983bc17aa856976c7b2",
+"8db79a84330408e0f21533645c688cd17f358a58",
+"4a67876af6fd6699dd7bddedf7e0cf8779094e94"
+],
+"displayName": "pickle",
+"createdAt": "2016-11-01T19:39:09.335Z",
+"updatedAt" : "2016-11-01T19:39:09.335Z",
+"_id": ObjectId("5818ef5d6c95cdc01c4e5193")
+},
+{
+"email": "mbush@gleason.com",
+"p": [
+"e000444788c8c85af0073f110a9325aa1410bab5",
+"d940309a3a7d0539649330a29c4256476652673b",
+"76be275b5f85c89d300c53a143bbce5243159fee"
+],
+"displayName": "CockRing",
+"createdAt": "2017-04-02T02:46:53.947Z",
+"updatedAt" : "2017-04-02T02:46:53.947Z",
+"_id": ObjectId("58e0661de3396128296e72ec")
+},
+{
+"email": "blortfish@gmail.com",
+"p": [
+"3e7571b037b37ec6f61bfb62d283381e3177cdb4",
+"1d612c9fbd09f0afa72e62aea32315c8b7bc72d4",
+"1198d3a91000721c5ced3b668d3febd465f490a8"
+],
+"displayName": "blortfish",
+"createdAt": "2018-04-02T18:58:21.175Z",
+"updatedAt" : "2018-04-02T18:58:21.175Z",
+"_id": ObjectId("5ac27d4d7dea77d656a5a497")
+},
+{
+"email": "rrshanno@gmail.com",
+"p": [
+"cfc15c4fca8544c2488afd7e8b21151a48f04bd8",
+"63c5ba3e565e974bdbb8412af03a8b825c48d665",
+"75fd6daa0c77ecf837d979fc8f5a993933d7d1fd"
+],
+"displayName": "theRyno",
+"createdAt": "2020-04-10T19:09:12.792Z",
+"updatedAt" : "2020-04-10T19:09:12.792Z",
+"_id": ObjectId("5e90c458ee7bfa462fdc0cf2")
+},
