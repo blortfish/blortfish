@@ -14,8 +14,18 @@ type User {
   name: String!
 }
 
+type Post {
+  postedBy: String!
+  servicePostId: String!
+  tags: [String]!
+  service: String!
+  datePosted: String!
+}
+
+
 type Query {
   todos: [Todo!]!
+  posts: [Post!]!
 }
 
 input NewTodo {

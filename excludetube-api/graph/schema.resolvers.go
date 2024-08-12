@@ -6,8 +6,11 @@ package graph
 
 import (
 	"context"
+	"encoding/json"
 	"excludetube-api/graph/model"
 	"fmt"
+	"io"
+	"os"
 )
 
 // CreateTodo is the resolver for the createTodo field.
@@ -17,7 +20,65 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) 
 
 // Todos is the resolver for the todos field.
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
-	return { id: "abc", text: "text" }
+	todos := []*model.Todo{
+		{
+			ID:   "1",
+			Text: "Sample Todo 1",
+			Done: false,
+			User: &model.User{
+				ID:   "1",
+				Name: "Sample User 1",
+			},
+		},
+		{
+			ID:   "2",
+			Text: "Sample Todo 2",
+			Done: true,
+			User: &model.User{
+				ID:   "2",
+				Name: "Sample User sdf2",
+			},
+		},
+		{
+			ID:   "3",
+			Text: "Sample Todos 33",
+			Done: true,
+			User: &model.User{
+				ID:   "3",
+				Name: "Sample User 3",
+			},
+		},
+	}
+
+	return todos, nil
+}
+
+// Posts is the resolver for the posts field.
+func (r *queryResolver) Posts(ctx context.Context) ([]*model.Post, error) {
+	// Read the JSON file
+	jsonFile, err := os.Open("./mongo-data/posts.json")
+	if err != nil {
+		return nil, fmt.Errorf("failed to open file: %v", err)
+	}
+	err = jsonFile.Close()
+	if err != nil {
+		return nil, err
+	}
+
+	// Read the file content into a byte slice
+	byteValue, err := io.ReadAll(jsonFile)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read file: %v", err)
+	}
+
+	// Unmarshal the JSON data into a slice of *model.Post
+	var posts []*model.Post
+	if err := json.Unmarshal(byteValue, &posts); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal JSON: %v", err)
+	}
+
+	// Return the posts
+	return posts, nil
 }
 
 // Mutation returns MutationResolver implementation.

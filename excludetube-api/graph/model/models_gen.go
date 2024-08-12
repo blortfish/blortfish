@@ -10,6 +10,14 @@ type NewTodo struct {
 	UserID string `json:"userId"`
 }
 
+type Post struct {
+	PostedBy      string    `json:"postedBy"`
+	ServicePostID string    `json:"servicePostId"`
+	Tags          []*string `json:"tags"`
+	Service       string    `json:"service"`
+	DatePosted    string    `json:"datePosted"`
+}
+
 type Query struct {
 }
 
