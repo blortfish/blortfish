@@ -1,0 +1,3 @@
+<div id="foot">
+	<p>Copyright &copy; Daniel Flint</p>
+</div>

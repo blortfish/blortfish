@@ -1,0 +1,40 @@
+.floatright{
+float: right;
+}
+.caption{
+text-align:center;
+}
+
+.clear{
+clear:both;
+}
+
+h1,h2,h3,h4,h5,h6{
+color:#800080;
+font-family:verdana;
+margin-bottom: 0px;
+}
+
+.food{
+color:#333300;
+}
+
+#copyright{
+text-align:center;
+margin:0 auto 0 auto;
+font-size:80%;
+color:gray;
+}
+
+a:hover{
+color:green;
+}
+
+body{
+background-color:#dddddd;
+}
+
+p{
+color:#383c44;
+font-family:monospace;
+}

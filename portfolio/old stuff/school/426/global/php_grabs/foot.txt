@@ -1,0 +1,3 @@
+<div id="foot">
+	<p>Purple Rain Inc. &copy; 2013</p>
+</div>

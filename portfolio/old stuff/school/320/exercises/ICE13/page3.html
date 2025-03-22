@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+<head>
+
+	<title>CSS-3 Box Effects</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<style type="text/css">
+		.reflection{
+		/* http://webkit.org/blog/182/css-reflections/ */
+			border:5px solid white;
+			-webkit-box-reflect:below 5px 
+			-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(white));
+		}
+		
+		.myshadow{
+		/* http://www.css3.info/preview/box-shadow/  */
+			-webkit-box-shadow: 10px 10px 5px #888;
+			padding: 5px 5px 5px 15px;
+			border:1px solid black;
+		}
+		
+	</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="container">
+
+<div id="header">
+<h1 id="banner">CSS 3</h1>
+
+<ul id="navlist">
+<li><a href="page1.html">Backgrounds</a></li>
+<li><a href="page2.html">Text Effects</a></li>
+<li><a id="current" href="page3.html">Box Effects</a></li>
+</ul>
+</div>
+
+<div id="main">
+<h2>What's new in CSS3 Box Effects?</h2>
+    <p>
+    	1) How about the CSS reflections?
+    	Test first in Safari to see it work, then try other browsers.
+    </p>
+    <img class="reflection" src="toad.jpeg">
+    
+    <p style="margin-top:150px" class="myshadow">2) How about the <code>box-shadow</code> property that has been applied to this paragraph?</p>
+    	
+    </p>
+   <h2>Prometheus Heats Things Up</h2>
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et leo tellus, commodo iaculis mi. Quisque vestibulum mollis ullamcorper. Nunc dictum ante a ipsum sollicitudin at cursus tortor eleifend. Ut hendrerit urna libero, vel viverra ligula. Duis vestibulum tempor tortor eget fringilla. Nulla facilisi. Suspendisse sit amet lectus nisi, consequat sodales nibh. Duis eget quam diam, congue consequat nisl. Proin lobortis, augue at vestibulum tristique, sem leo adipiscing sapien, quis condimentum augue sem et massa. Donec aliquet, sapien non mattis mattis, erat diam commodo sapien, quis tristique neque arcu eget justo. Aliquam tortor diam, consequat a facilisis ac, commodo eu felis. Suspendisse urna leo, consequat non feugiat sed, vulputate non turpis. Donec vitae varius turpis. Morbi quis turpis nisi. Sed eros libero, lobortis eget placerat vitae, tincidunt et justo. Curabitur ac magna at neque viverra faucibus.
+  </div>
+    
+    <div id="extras">
+
+	<h2>Links</h2>
+
+	<ul id="stories">
+		<li><a href="http://css.maxdesign.com.au/floatutorial/tutorial0601.htm">Nav bar tutorial</a></li>
+		<li><a href="http://www.css3.info/">http://www.css3.info/</a></li>
+
+	</ul>
+
+
+
+
+	
+	
+	
+	
+	</div> 
+
+	
+
+	<div id="footer">
+	<p>Content taken from <cite>Old Greek Stories</cite> by James Baldwin (1914). It is a copyright free text available at <a href="http://www.gutenberg.net/1/1/5/8/11582/">Project Gutenberg</a>.</p>
+
+
+	</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+<head>
+
+	<title>Text Effects</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<style type="text/css">
+		h2{
+		/* x, y, blur radius, shadow color */
+		text-shadow: 2px 2px 2px #888;
+		}
+		
+		.inferno {
+			/* http://www.css3.info/wp-content/themes/new_css3/style.css */
+			background: black;
+			color: white;
+			font-size: 30px;
+			margin: 10px;
+			padding: 40px 0 10px;
+			text-align: center;
+			text-shadow: 0 0 4px white, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -25px 18px #f20;
+		}
+
+		@font-face{
+			font-family: "GlazKrak";
+			src: url(glazkrak.ttf) format("truetype");
+		}
+		
+		.font_effect{
+			font-size:98px;
+			font-family: "GlazKrak",Helvetica,sans-serif;
+			-webkit-text-stroke: 1px DarkSlateBlue;
+			-webkit-text-fill-color: YellowGreen;
+			text-shadow:2px 2px 1px grey;
+		}
+	</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="container">
+
+<div id="header">
+<h1 id="banner">CSS 3</h1>
+
+<ul id="navlist">
+<li><a href="page1.html">Backgrounds</a></li>
+<li><a id="current" href="page2.html">Text Effects</a></li>
+<li><a href="page3.html">Box Effects</a></li>
+</ul>
+</div>
+
+<div id="main">
+<h2>What's new in CSS3 text effects?</h2>
+    <p>
+    	1) How about the <code>text-shadow</code> property that will let you add shadow to text? 
+    	It should be working now on this document's &lt;h2&gt; tags.
+    	Test first in Safari to see it work, then try other browsers.
+    </p>
+    
+    <p>
+    	2) Multiple shadwows have been applied to the &lt;h3&gt; below. View the browser source to see how this works.
+    </p>
+      <h3 class="inferno">Multiple shadows are HOT!</h3>
+    
+    <p><span class="font_effect">3 - CSS3 Web Fonts</span><br > (Font embeding) is pretty exciting. Soon we won't have to worry about what fonts the user has - we can use any font we wish, as long as we embed it in the page.
+    </p>
+  
+    
+ 
+  </div>
+    
+    <div id="extras">
+
+	<h2>Links</h2>
+
+	<ul id="stories">
+		<li><a href="http://css.maxdesign.com.au/floatutorial/tutorial0601.htm">Nav bar tutorial</a></li>
+		<li><a href="http://www.css3.info/">http://www.css3.info/</a></li>
+
+	</ul>
+
+
+
+
+	
+	
+	
+	
+	</div> 
+
+	
+
+	<div id="footer">
+	<p>Content taken from <cite>Old Greek Stories</cite> by James Baldwin (1914). It is a copyright free text available at <a href="http://www.gutenberg.net/1/1/5/8/11582/">Project Gutenberg</a>.</p>
+
+
+	</div>
+	
+</div>
+</body>
+</html>

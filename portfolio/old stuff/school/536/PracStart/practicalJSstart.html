@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<!--Feel free to add any attributes you wish (like id).  You can't add any tags...
+	Remember you just need to get this to work in Chrome (don't worry about IE).
+	document.write and innerHTML wont get any points!!!!--> 
+	<title>practical-JS</title>
+	<style type="text/css"> 
+		div.holdL{
+			float:left;border-style:solid;border-width:3px;padding:3px;
+		}
+		div.holdR{
+			float:right;border-style:solid;border-width:3px;padding:3px;
+		}
+	</style>
+	<script type="text/javascript">
+	//<!--
+	
+		/*
+		1) Write a function below that is called onload of the document.
+		It will create a text node containing 'dashed'. Make it orange and place it in 
+		front of the radio button that has no label. Must look like the example for full credit.
+		
+		IF there is localStorage holding the left and/or top from the 'Move the table:' inputs 
+		from a previous visit (#3 below), put the values back into the Left: and Top: blanks and move the 
+		'table'.
+		*/
+		
+		window.onload = function()
+		{
+			var txt = document.createTextNode('dashed');
+			var radios = document.getElementsByName('bs');
+			var span = document.createElement('span');
+			span.style.color = 'orange';
+			span.appendChild(txt);
+			for(var i=0;i<radios.length;i++){
+				
+				var value = radios[i].previousSibling.nodeValue.trim();
+				
+				if(value ==  "")
+				{
+					radios[i].previousSibling.nodeValue = txt.nodeValue;
+					
+				}
+				
+				
+			}
+			if (window.localStorage) {
+				var table = document.getElementById('mvtable');
+				table.style.top = localStorage.top;
+				table.style.left = localStorage.left;
+			}
+			else{
+				
+			}
+			
+		
+ setListen();
+		
+	    };
+		/*
+		2) Call a function when you click on each <div> with a class of holdL or holdR
+		that takes the text from the input and puts it into the clicked <div>, then takes the  
+		border-style designated by the radio buttons and sets the border-style of the <div>.
+		*/
+	    
+	    	 
+		 
+		
+		
+		
+		
+		function setListen(){
+		var divs = document.getElementsByClassName('holdL');
+		 var divs2 = document.getElementsByClassName('holdR');
+		 var input = document.getElementById('changeText').value;
+	
+		 for(var x=0; x<divs.length; x++){
+			 
+			divs[x].onclick = function() {
+			
+				this.firstChild.nodeValue = input;
+				this.style.border = checkBorder(document.getElementsByName( 'bs' ));
+			};
+		 }
+		 for(var y=0; y<divs2.length; y++){
+			divs2[y].onclick = function() {
+				
+				this.firstChild.nodeValue = input;
+				this.style.border = checkBorder(document.getElementsByName( 'bs' ));
+			};
+		 }
+		 
+		 function checkBorder(which) {
+			
+			var string = "solid";
+			for (var x=0;x<which.length;x++) {
+				
+				if (which[x].checked)
+				{
+					string = which[x].previousSibling.nodeValue;
+				}			
+			}
+			
+			
+			return string;
+		 }
+		}
+		
+		
+		
+		/*
+		3) Write a function that moves the 'table' group to the location denoted in the 
+		'Left:' and 'Top:' inputs. Store the left and top values into localStorage
+		*/
+		function moveIt()
+		{
+			var table = document.getElementById('mvtable');
+			var top = document.getElementById('mtop').value;
+			var left = document.getElementById('mleft').value;
+			
+			localStorage.top = parseInt(top) +'px';
+			localStorage.left = parseInt(left) +'px';
+			table.style.top = parseInt(top) +'px';
+			table.style.left = parseInt(left) +'px';
+		}
+		
+		/*
+		4) Write a function below that will create a new 'row'.  A row is defined as a div 
+		with a class of 'outer' with as many divs inside of it as columns (2 if you don't do the 
+		extra credit).  Each 'cell' in the row will have 'text to change' as it's text AND the 
+		correct class ('holdL' for the left one, 'holdR' for the right). You will also have to 
+		give each an onclick event that will call the function in part 1 above and allow the text
+		and it's border-style to change.
+		*/
+		function createRow() {
+			var text = document.createTextNode('some text');
+			var text2 = document.createTextNode('some text');
+			var table = document.getElementById('mvtable');
+			var div = document.createElement('div');
+			var row1 = document.createElement('div');
+			var row2 = document.createElement('div');
+			
+			div.className = 'outer';
+			row1.appendChild(text);
+			row2.appendChild(text2);
+			row1.className='holdL';
+			row2.className='holdR';
+			div.appendChild(row1);
+			div.appendChild(row2);
+			
+			table.appendChild(div);
+			setListen();
+			
+		}
+	  
+		/*
+		Extra Credit:  (be sure you are done with all else before you try this!)
+		-Uncomment the <p> tag below that has the input inside of it
+		-Create an onclick event on the button WITHOUT adding an HTML attribute
+		
+		-When the button is clicked, call a function that will create a new column
+		for the 'table'.  Each cell should have 'text to change' in it as you create it as 
+		well as a solid border, and each row AND column must work correctly (if I alternate 
+		between clicking on the two buttons, each row AND column must have complete inside of 
+		the table.)  All cells will take the new text and border-style when they are clicked.
+		
+		Hint: think getElementsByClassName()
+		
+		(If any part of this is wrong, you don't get the point)*/
+	    
+	//-->
+	
+	
+	</script>
+</head>
+<body>
+<form>
+	Text to go into &lt;div&gt;'s:<br/>
+	<input id="changeText" type="text" value="text to change"/><br/>
+	<p id="textPlacement">
+		Border-Style for text:<br/>
+		solid<input type="radio" name="bs" checked="checked"/><br/>
+		dotted<input type="radio" name="bs"/><br/>
+		<input type="radio" name="bs"/><br/>
+		ridge<input type="radio" name="bs"/><br/>
+		inset<input type="radio" name="bs"/><br/>
+		outset<input type="radio" name="bs"/><br/>
+	</p>
+	<hr/>
+	Move the table:<br/>
+	Left: <input id="mleft" type="text"/><br/>
+	Top: <input id="mtop" type="text"/><br/>
+	<input onclick="moveIt()" type="button" value="move it!"/>
+	<hr/>
+	<p>
+		Create another 'row':<input onclick="createRow()" type="button" value="create row"/>
+	</p>
+	<!--for the extra credit - uncomment below if you try it! -->
+	<!--
+	<p>
+		Create new column for each row (extra credit): <input type="button" value="create column"/>	
+	</p>
+	-->
+</form>
+<div id="mvtable" style="position:absolute; top:30px; left:310px;">
+	<div class="outer">
+	  <div class="holdL">text to change</div>
+	  <div class="holdR">text to change</div>
+	</div>
+	<div class="outer">
+	  <div class="holdL">text to change</div>
+	  <div class="holdR">text to change</div>
+	</div>
+
+</div>
+<div style="position:absolute;bottom:10px;right:10px;border-style:dotted;border-width:2px;">
+	*<span style="color:orange">Orange</span> text is dynamically created on load of page<br/>
+	*Extra credit button is commented out (uncomment if you want to try)<br/>
+	<span style="position:relative;left:10px;">-for full credit both rows and columns must work</span><br/>
+	<span style="position:relative;left:10px;">-Extra credit is NASTY, finish all else first</span><br/>
+	<span style="position:relative;left:10px;">-Extra credit hint: think about getElementsByClassName()</span>
+</div>
+</body>
+</html>

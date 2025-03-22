@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../includes/cap_feedall.xsl" type="text/xsl" media="screen"?>
+<rss version="2.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:volcano="http://volcano.wr.usgs.gov/rss/volcanons/1.0">
+<channel>
+<title>Recent Volcano Observatory Activity Reports</title>
+<description>Recent Updates from the U.S. Geological Survey Volcano Hazards Program</description>
+<link>http://volcanoes.usgs.gov/</link>
+<dc:publisher>U.S. Geological Survey Volcano Hazards Program</dc:publisher>
+<pubDate>Mon, 11 Apr 2011 17:44:41 +0000</pubDate>
+
+<item><title>Kilauea Daily Update issued Apr 11, 2011 07:42 HST Volcano Alert Level WATCH - Aviation Color Code ORANGE </title><description><b>Activity Summary for past 24 hours:</b> The summit lava lake level continued to rise slowly. The Pu`u `O`o lava lake drained and refilled the deepest part of the crater. Seismicity levels remained low.
+
+<b>Past 24 hours at Kilauea summit:</b>  The summit lava lake level continued to rise slowly, circulation remained from south to north; the level was deep in the cavity inset within the east wall of Halema`uma`u Crater. 
+
+The summit tiltmeter network recorded DI inflation at 2 pm followed by a possible DI deflation start at 4 am this morning. Seismic tremor levels were variable but low.  ...</description><link>http://volcanoes.usgs.gov/activity/archive/current.php?noticeid=6302</link><guid>http://volcanoes.usgs.gov/activity/archive/current.php?noticeid=6302</guid><georss:point>19.421 -155.287</georss:point><volcano:alertlevel>WATCH</volcano:alertlevel><volcano:colorcode>ORANGE</volcano:colorcode></item>
+<item><title>Kilauea Daily Update issued Apr 10, 2011 07:26 HST Volcano Alert Level WATCH - Aviation Color Code ORANGE </title><description><b>Activity Summary for past 24 hours:</b> The summit lava lake slowly filled and drained causing level changes of several meters. The Pu`u `O`o lava lake continued filling the deepest part of the crater. Seismicity levels remained low.
+
+<b>Past 24 hours at Kilauea summit:</b> The lava lake level rose and fell deep in the vent inset within the east wall of Halema`uma`u Crater alternately being filled from and drained to a source/sink out of webcam sight to the south; during each filling cycle, the lava surface was slightly deeper in the vent cavity. 
+
+The summit tiltmeter network recorded  ...</description><link>http://volcanoes.usgs.gov/activity/archive/current.php?noticeid=6301</link><guid>http://volcanoes.usgs.gov/activity/archive/current.php?noticeid=6301</guid><georss:point>19.421 -155.287</georss:point><volcano:alertlevel>WATCH</volcano:alertlevel><volcano:colorcode>ORANGE</volcano:colorcode></item></channel></rss>

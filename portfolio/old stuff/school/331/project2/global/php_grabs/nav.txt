@@ -1,0 +1,8 @@
+<div id="nav">
+	<ul>
+		<li><a href="http://people.rit.edu/def6054/331/project2/">Home</a></li>
+		<li><a href="http://people.rit.edu/def6054/331/project2/doc">Documentation</a></li>
+		<li><a href="http://people.rit.edu/def6054/331/project2/cast">Cast</a></li>
+		<li><a href="http://people.rit.edu/def6054/331/project2/contact">Contact</a></li>
+	</ul>
+</div>

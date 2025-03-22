@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8' />
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="logo.png" />
+	<!--file contains test for IE and version -->	
+	<!-- GET IE VERSION AND IF IE -->
+	<script>
+	isIE = false;
+	verIE = -1;
+	</script>
+	<!--[if IE 9]>
+	<script>
+	isIE = true;
+	verIE = 9;
+	</script>
+	<![endif]-->
+	
+	<!--[if IE 8]>
+	<script>
+	isIE = true;
+	verIE = 8;
+	</script>
+	<![endif]-->
+	
+	<!--[if IE 7]>
+	<script>
+	isIE = true;
+	verIE = 7;
+	</script>
+	<![endif]-->
+	
+	<!--[if lt IE 7]>
+	<script>
+	isIE = true;
+	verIE = 0;
+	
+	</script>
+	<![endif]-->	    
+	<!--  END GET IE VERSION AND IF IE --> 
+	
+	<title>Group 4 Project 3 - Submit a Question</title>
+         <script src="http://code.jquery.com/jquery-latest.js"></script>
+		 <script src="jquery.h5validate.js"></script>
+		 <script src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+
+		<link rel='stylesheet' href='main.css' type='text/css' />
+        <script type="text/javascript">
+            $(document).ready(function(){
+			
+                body = $('body');
+                $(body).append($('<div id="wrapper"></div>'));
+                $(body).append($('<div id="foot"></div>'));
+                
+                    var tempURL = 'http://nova.it.rit.edu/~539_group4/get_games_list.php';
+                    // FIRST REQUEST USED TO POPULATE START SCREEN WITH ABILITY TO CHOOSE GAME
+                    if (isIE)
+                    {
+                            
+                            var xdr = new XDomainRequest();
+                            xdr.open("get", tempURL);
+                            xdr.onload = function() {
+                            var dom = new ActiveXObject("Microsoft.XMLDOM");
+                            dom.async = false;
+                            dom.loadXML(xdr.responseText);  
+                            };
+                            xdr.send();
+                            buildInterface(xdr.responseText);
+                          ;
+                    }
+                    else {
+                        var xmlRequest = 
+                        $.ajax({
+                            url: tempURL,
+                            type: 'GET',
+                            cache: false,
+                            dataType : 'xml',
+                            success: function(data){
+                            buildInterface(data);
+                            },
+                            error: function(data) {
+                            alert('ajax error');
+                            }  
+                        }); 
+                    }  
+                buildInterface();
+			
+			
+            });
+            
+            
+            
+            function buildInterface(data)
+            {
+                var xml = data;
+                var games = $(xml).find('game');
+                var cats = $(games).find('category');
+				
+                $('#wrapper').empty();
+                $('#wrapper').append('<div id="selectAGame"></div>');
+                $('#selectAGame').append('<img src="jeopardytitle.gif" alt="jtitle" />');
+                $('#selectAGame').append('<p>Select a game below to begin.</p>');
+                
+                $.each(games, function(index){
+			$('#selectAGame').append('<div id="info"></div>)');
+			$('#info').append('<h3 class="selectRound" id="roundtitle1" style="margin-left: 100px;">Round 1</h3>');
+			$('#info').append('<ul class="formCatsR1" id="round1"></ul>');
+			$('#info').append('<h3 class="selectRound" id="roundtitle2"style="margin-left: 100px;">Round 2</h3>');
+			$('#info').append('<ul class="formCatsR2" id="round2"></ul>');
+			
+			$.each(cats, function(){
+				if($(this).attr('roundId')==1)
+				{
+					$('#round1').append('<li>'+$(this).attr('title')+'</li>');
+					$('.formCatsR1').hide();
+					$('.formCatsR2').hide();
+				}
+				else if($(this).attr('roundId')==2)
+				{
+					$('#round2').append('<li>'+$(this).attr('title')+'</li>');
+				}   
+			});
+			
+			
+			$('.selectRound').on('click', function(){
+				if($(this).attr('id')== 'roundtitle1')
+				{
+				$('.formCatsR1').toggle('slow');
+				}
+				if($(this).attr('id')== 'roundtitle2')
+				{
+				$('.formCatsR2').toggle('slow');
+					
+				}
+			});
+			$('#round1 li').on('click', function(){
+				
+				//alert($(this).text());
+				var newVal = new String($(this).text());
+				$('#category').val(newVal);
+				$('#round').val('1');
+				
+			});
+			$('#round2 li').on('click', function(){
+				
+				//alert($(this).text());
+				var newVal = new String($(this).text());
+				$('#category').val(newVal);
+				$('#round').val('2');
+				
+			});
+			
+                })
+			buildForm();
+			//validate the form when submitted
+			// validate signup form on keyup and submit
+	$("#myForm").validate({
+		rules: {
+			name: "required",
+			email: {
+				required: true,
+				email: true
+			}
+			//round: {required: true}
+			//category: "required",
+			//question:"required",
+			//answer:"required"
+		},
+		messages: {
+			name: "Please enter your name",
+			email: "Please enter a valid email address",
+			round: "Please pick your round",
+			category: "Please pick a category",
+			question: "Please enter your question",
+			answer: "Please enter an answer"
+		}
+	});
+		  }
+		function buildForm(){
+		
+			if($('#myForm').length){
+			
+			}else{
+			$('#selectAGame').append('<div = "myDiv" style="color:white;"><form onsubmit="sendData()" id= "myForm"></form></div>');
+			$('#myForm').append('<label>Name: </label><input name ="name" id="name" type="text" ><br/>');
+			$('#myForm').append('<label>Email: </label><input name ="email" id="email" type="text" ><br/>');
+			$('#myForm').append('<label>Round: </label><input name ="round" id="round" type="text" ><br/>');
+			$('#myForm').append('<label>Category: </label><input name ="category" id="category" type="text" ><br/>');
+			$('#myForm').append('<label>Question: </label><textarea name ="question" id="question" col="30" row="100" ></textarea><br/>');
+			$('#myForm').append('<label>Answer: </label><textarea name ="answer" id="answer" col="30" row="100" ></textarea><br/>');
+			$('#myForm').append('<input type="submit" name= "submitbtn" value="Submit your answer" >');
+			}
+		};
+	    
+        </script>
+</head>
+
+<body>	
+	
+</body>
+ 
+
+</html>
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Events</title>
+	<script type="text/javascript">
+	//<![CDATA[
+	function init()
+	{
+		document.getElementsByTagName('img')[1].onclick = doIt;
+		document.getElementsByTagName('img')[1].onmouseout =
+		function(){
+			doThat( 'anon funct' );
+		};
+	}
+	function init2(){
+		var img = document.getElementsByTagName( 'img')[2];
+		if(img.addEventListener)
+		{
+			img.addEventListener('mouseover', doIt, false);
+			img.addEventListener('mouseover', function(){doThat('safkjl')}, false);
+		}
+		else
+		{
+			img.attachEvent('onmouseover', doIt, false);
+			img.attachEvent('onmouseover', function(){doThat('IE BLOWS')}, false);
+		}
+	}
+	
+	function doThat( x )
+	{
+		console.log( x );
+	}
+	
+	function doIt()
+	{
+		console.log('no arguments');
+		
+	}
+	//]]>
+	</script>
+</head>
+<body onload="init(), init2();">
+
+  <h1>Image 1:</h1><img src="pic.jpg" onclick="console.log('from html attribute event'); " />
+  
+  <h1>Image 2:</h1><img src="pic.jpg"/>
+  
+  <h1>Image 3:</h1><img src="pic.jpg"/>
+
+</body>
+</html>

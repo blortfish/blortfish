@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8' />
+	<title>.:AJAX:.</title>
+	<script>
+	
+	var http = new XMLHttpRequest(); 	// We create the HTTP Object
+	var isWorking = false; 						// Flag for stopping the next request until this one is done...
+	
+	// If we got the information, do something with it!
+	function handleHttpResponse() {
+	  if (http.readyState == 4) {
+	    // If I got something...
+	    if (http.status==200) {
+	      // Use the XML DOM to unpack the data 
+	      var xmlDocument = http.responseXML; 
+	      //*********************************************************************
+	      
+	      var stuffForPage = "";
+	      var whoTags = xmlDocument.getElementsByTagName('who');
+	      for (i = 0; i<whoTags.length;i++)
+	      {
+		if(whoTags[i].firstChild)
+		{
+			stuffForPage += whoTags[i].firstChild.nodeValue + "<br/>";
+		}	
+	      }
+	
+	document.getElementById('container').innerHTML = stuffForPage;
+	      
+		  	//*********************************************************************
+	      isWorking = false;
+	    }
+	  }
+	}
+	
+	//for the button click...
+	function addUser(what) {
+		if( !isWorking && http)
+		{
+			http.open( 'GET', 'http://nova.it.rit.edu/~dmgics/536/07/addUserPhp.php?who='+what,true);
+			http.onreadystatechange = handleHttpResponse;
+			isWorking = true;
+			http.send(null);
+		}
+	}
+	
+	function checkUsers() {
+		//not waiting for req
+		if( !isWorking && http)
+		{
+			http.open("GET", "http://nova.it.rit.edu/~dmgics/536/07/addUserPhp.php", true);
+			http.onreadystatechange = handleHttpResponse;
+			isWorking = true;
+			http.send(null);
+			
+		}
+		window.setTimeout('checkUsers();', 5000);
+	}
+	
+	</script>
+	<style type="text/css">
+		#container {
+			background: #ccc;
+			border: black 5px solid;
+			min-height: 300px; 
+			padding: 10px;
+			width: 300px; 
+		}
+	</style>
+</head>
+<body onload="checkUsers();">
+	Enter your name (then tab out of input) to add to list!
+	<input type="text" name="newName" onchange="addUser(this.value);"/>
+	<div id="container"></div>
+</body>
+</html>

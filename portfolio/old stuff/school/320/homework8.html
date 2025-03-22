@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+		<title>Day 8 Homework: Unix and Web Practice</title>		
+		<style type="text/css">
+		*{
+		padding:0px;
+		margin:0px;
+		}
+		body{
+		background-color:black;
+		font-family: georgia;
+		}
+		#wrapper{
+		background-color:white;
+		color:black;
+		margin:25px auto 25px auto;
+		width:800px;
+		padding-bottom:25px;
+		}
+		h1, h2, h3 ,h4 ,h5 ,h6{
+		margin:0 0 0 25px;
+		}
+		p, dl{
+			margin: 25px 25px;
+		}
+		dd{
+		margin-left:35px;
+		}
+		a{
+		margin-left:25px;
+		color:white; 
+		text:decoration:none;
+		}
+		a:hover{
+		color:red;
+		}
+		</style>
+	</head>
+	<body>
+	<div>
+		<a href="http://people.rit.edu/def6054/320">Back to Homepage</a>
+	</div>
+	<div id="wrapper">
+		<h2>Day 8: Unix Commands</h2>
+		<p>Description: A list of unix commands and their definitions.</p>
+		
+		<dl>
+		  <dt>cd</dt>
+			<dd>- Typing just cd alone will move you into the home directory.</dd>
+		  <dt>cd ..</dt>
+			<dd>- Used to go back one directory on the majority of all Unix shells. It is important that the space be between the cd and the ..</dd>
+		<dt>cd /</dt>
+			<dd>- This command will put you within the directory you specify with after the /</dd>
+		<dt>cd folder1</dt>
+			<dd>- This command will put you within the directory folder1</dd>
+		<dt><br/>Permissions work as follows</dt>
+			<dd>
+				<ol>
+					    <li>Owner (you)</li>
+						<li>Group (a group of other users that you set up)</li>
+						<li>World (anyone else browsing around on the file system)</li>
+				</ol>
+				<br/>
+				<ul>
+					<li>0 = no permissions whatsoever; this person cannot read, write, or execute the file
+					</li>
+					<li>1 = execute only</li>
+					<li>2 = write only</li>
+					<li>3 = write and execute (1+2)</li>
+					<li>4 = read only</li>
+					<li>5 = read and execute (4+1)</li>
+					<li>6 = read and write (4+2)</li>
+					<li>7 = read and write and execute (4+2+1)</li>
+				</ul><br/>
+			</dd>
+		<dt>chmod 644 file1</dt>
+			<dd>- Sets the access permission of file1 to 644</dd>
+		<dt>chmod 700 folder1</dt>
+			<dd>- Sets the access permission of folder1 to 700</dd>
+		<dt>chmod 755 folder1</dt>
+			<dd>- Sets the access permission of folder1 to 755<br/></dd>
+			
+			
+		<dt>cp file1 file2</dt>
+			<dd>- Copies the contents of file1 into file2. If file2 does not exist, it is created; otherwise, file2 is overwritten with the contents of file1.</dd>
+		<dt>ls</dt>
+			<dd>- Lists the contents of a directory.</dd>		
+		<dt>ls -l</dt>
+			<dd>- Shows you huge amounts of information (permissions, owners, size, and when last modified.)</dd>
+		<dt>ls -la</dt>
+			<dd>- Shows you huge amounts of information (permissions, owners, size, and when last modified.) for all files</dd>
+		<dt>man command_name</dt>
+			<dd>- To read a manual page for a Unix command use this syntax</dd>
+		<dt>mkdir folder1</dt>
+			<dd>- Makes a new directory, folder1</dd>
+		<dt>mv file1 file2</dt>
+			<dd>- If file2 does not exist, then file1 is renamed file2. If file2 exists, its contents are replaced with the contents of file1. </dd>
+		<dt>pwd</dt>
+			<dd>- Print working directory, is used to output the path of the current working directory</dd>
+		<dt>rm file1</dt>
+			<dd>- Deletes file1</dd>
+		<dt>rm proj?.html</dt>
+			<dd>- Delete all files named proj?.html where ? is any single character</dd>
+		<dt>rmdir folder1</dt>
+			<dd>- The "rmdir folder1" command removes a directory named "folder1" in the Unix shell's currently active directory. Note this command will fail on execution if the specified directory contains any files.</dd>
+		<dt>cal</dt>
+			<dd>- Displays a calendar</dd>
+		<dt>cal 10 2010</dt>
+			<dd>- Displays a calendar for [10] month and [2010] year.</dd>	
+		<dt>say "I like Unix" </dt>
+			<dd>- Echoes I like Unix</dd>
+		<dt>cat file1</dt>
+			<dd>- The purpose of cat is to concatenate (or catenate) files.</dd>
+		<dt>telnet towel.blinkenlights.nl</dt>
+			<dd>- Plays Starwars in cmd</dd>
+		</dl> 
+	</div>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+*
+{
+padding: 0px;
+margin: 0px;
+}
+
+@font-face 
+{
+font-family:Sansation;
+src:url("Sansation.ttf");
+}
+
+@font-face
+{
+font-family: Cantarell;
+src: url("Cantarell.ttf");
+}
+
+h1, h2, h3, h4, h5, h6
+{
+font-family:verdana;
+text-align:center;
+color: yellow;
+padding:5px;
+}
+
+img
+{
+border:0px;
+}
+
+body
+{
+background-color:black;
+}
+
+p
+{
+font-family: AmericanTypewriter;
+color:white;
+padding: 10px;
+text-align: left;
+}
+
+a
+{
+text-decoration: none;
+font-family: verdana;
+color: white;
+}
+
+table
+{
+text-align: center;
+border: 0px;
+width: 150px;
+}
+
+
+hr
+{
+color:white;
+}
+
+#wrapper
+{
+width: 300px;
+background-color:#F36E21;
+margin: 2px auto 2px auto;
+border: medium solid black;
+
+}
+
+#banner
+{
+padding: 0px 0px 10px 0px;
+background-color:black;
+}
+
+
+.headpic
+{
+float:none;
+margin-left:auto;
+margin-right:auto;
+height: 150px;
+height: 150px;
+width: 200px;
+padding:0px;
+}
+
+#projects
+{
+background-color:#5E2721;
+float: right;
+width: 150px;
+border-left: thin dotted white;
+border-bottom: thin dotted white;
+margin-left: 5px;
+text-align:center;
+}
+
+
+div.span
+{
+text-align: center;
+background-color: black;
+border-top: thin solid white;
+border-bottom: thin solid white;
+}
+
+#content
+{
+margin-left:10px;
+margin-right:10px;
+}
+
+#mobilepic
+{
+display:inline;
+padding-top: 10px;
+margin: 0px 0px 5px 5px;
+width:125px;
+}
+
+.brview
+{
+display:none;
+}

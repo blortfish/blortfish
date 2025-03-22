@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss 
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" 
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:eq="http://earthquake.usgs.gov/eqcenter/catalogs/eq"
+	version="2.0">
+<channel>
+	<title>USGS M5+ Earthquake CAP Alerts</title>
+	<description>Real-time, worldwide Earthquake CAP Alerts for the past 7 days</description>
+	<link>http://earthquake.usgs.gov/eqcenter/catalogs/</link>
+	<dc:publisher>U.S. Geological Survey</dc:publisher>
+	<pubDate>Tue, 29 Sep 2009 17:48:15 UTC</pubDate>
+	<atom:link xmlns:atom="http://purl.org/atom/ns#" rel="self" href="http://earthquake.usgs.gov/eqcenter/catalogs/caprss7days5.xml" type="application/rss+xml"/>
+<item><title>EQ 7.9 PAGO PAGO, American Samoa - PRELIMINARY REPORT</title><description>An earthquake with magnitude 7.9 occurred near PAGO PAGO, American Samoa at 17:48:15.00 UTC on Sep 29, 2009. (This event has been reviewed by a seismologist.)</description><link>http://earthquake.usgs.gov/eqcenter/catalogs/cap/at00424649</link><pubDate>Tue, 29 Sep 2009 17:48:15 UTC</pubDate><eq:seconds>1254246495</eq:seconds><geo:lat>-15.673</geo:lat><geo:long>-171.797</geo:long><dc:subject>7</dc:subject><eq:origLink>http://earthquake.usgs.gov/eqcenter/recenteqsus/Quakes/at00424649.php</eq:origLink></item>
+<item><title>EQ 7.9 APIA, Samoa - PRELIMINARY REPORT</title><description>An earthquake with magnitude 7.9 occurred near APIA, Samoa at 17:48:14.29 UTC on Sep 29, 2009. (This event has been reviewed by a seismologist.)</description><link>http://earthquake.usgs.gov/eqcenter/catalogs/cap/us2009mdbi</link><pubDate>Tue, 29 Sep 2009 17:48:14 UTC</pubDate><eq:seconds>1254246494</eq:seconds><geo:lat>-15.554</geo:lat><geo:long>-172.141</geo:long><dc:subject>7</dc:subject><eq:origLink>http://earthquake.usgs.gov/eqcenter/recenteqsww/Quakes/us2009mdbi.php</eq:origLink></item>
+<item><title>EQ 5.8 Naha, Okinawa, Japan - PRELIMINARY REPORT</title><description>An earthquake with magnitude 5.8 occurred near Naha, Okinawa, Japan at 19:22:56.09 UTC on Sep 28, 2009. (This event has been reviewed by a seismologist.)</description><link>http://earthquake.usgs.gov/eqcenter/catalogs/cap/us2009mcbr</link><pubDate>Mon, 28 Sep 2009 19:22:56 UTC</pubDate><eq:seconds>1254165776</eq:seconds><geo:lat>27.938</geo:lat><geo:long>127.867</geo:long><dc:subject>5</dc:subject><eq:origLink>http://earthquake.usgs.gov/eqcenter/recenteqsww/Quakes/us2009mcbr.php</eq:origLink></item>
+</channel>
+</rss>

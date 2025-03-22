@@ -37,9 +37,11 @@ func main() {
 // 		},
 // 	})
 
-	router.Handle("/", playground.Handler("Starwars", "/query"))
+	router.Handle("/", playground.Handler("Excludetube API", "/query"))
+
 	router.Handle("/query", srv)
 
+  print("gql running at http://localhost:8080")
 	err := http.ListenAndServe(":8080", router)
 	if err != nil {
 		panic(err)

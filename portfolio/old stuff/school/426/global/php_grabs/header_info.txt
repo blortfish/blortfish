@@ -1,0 +1,4 @@
+<link rel="icon" type="image/png" href="http://people.rit.edu/def6054/426/global/media/images/favicon.png">
+
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>

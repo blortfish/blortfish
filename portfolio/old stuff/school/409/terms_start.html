@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+	// only use this array in part 2
+	/*
+	var data = [
+			["Document_Object_Model","Document Object Model","The Document Object Model is the way JavaScript sees its containing HTML page and browser state"],
+			["DOM_scripting", "DOM Scripting", "what are some of the destinctions between DOM scripting and DHTML?"],
+			["Ajax_(programming)","Ajax Programming","Note the difference between AJAX and Ajax."],
+			["XML","XML","what is the difference between a well-formed and a valid XML document?"],
+			["JSON","JSON","Which is faster, XML or JSON?"],
+			["Javascript","JavaScript",""],
+			["Screen_scraping","Screen Scraping"]
+			];
+		*/
+		window.onload = doStuff;
+		
+		function doStuff(){
+			
+				var baseURL = "http://en.wikipedia.org/wiki/";
+				var anchors = document.getElementsByTagName("a") ;
+				var len = anchors.length;
+				for(var i=0; i<len; i++) 
+				{
+				var value = anchors[i];
+				var linkval = value.firstChild.nodeValue;
+				value.setAttribute('title', linkval);
+				value.setAttribute('href', baseURL + linkval);
+				}
+				
+				
+		} // end function doStuff()
+	</script>
+	
+	<style type="text/css" media="all">
+		*{
+			margin:0;
+			padding:0;
+			color:#333;
+		}
+		
+		
+		body{
+			background-color:#334c6f;
+			font-family:tahoma,verdana,sans-serif;
+		}
+		
+		p{
+			margin-left:15px;
+		}
+		
+		h1{
+			font-size:150%;
+			background-color:lightblue;
+			padding-left:15px;
+		}
+		
+		h2{
+			font-size:125%;
+			background-color:lightblue;
+			padding-left:15px;
+		}
+		
+		ol,ul{
+			margin-left:35px;
+			margin-top:1.5em;
+		}
+		#content{
+			background-color:snow;
+			margin-left:15%;
+			margin-right:15%;
+		}
+		
+		#instructions{
+			margin-left:100px;
+			margin-right:100px;
+			border:1px solid gray;
+			background-color:ddd;
+			padding:10px;
+			list-style-position:inside;
+			margin-bottom:3em;
+		}
+		
+		#instructions p{
+			margin: 0.5em 0 0 0;
+		
+		}
+		
+		li{
+			padding-bottom:0.8em;
+			margin-bottom:0.8em;
+			border-bottom:1px gray dashed;
+		}
+		
+		a,a:link{
+			text-decoration:none;
+			color:#222;
+			font-weight:bolder;
+		}
+		
+		a:hover{
+			text-decoration:underline;
+		}
+
+	</style>
+
+
+	<title>4004-751 Terms :: Version 1</title>
+</head>
+<body>
+<div id="content">
+	<h1>751 Terminology :: Version 1</h1>
+	<p>This is a demonstration of client-side JavaScript that will use level-1 DOM methods to dynamically create hypertext links to Wikipedia. The capabilities we are looking for (by version) are below:</p>
+	<ol id="instructions">
+		<li>Change the <code>href</code> values of the existing links to the appropriate URL to wikipedia.org.<p>To accomplish this, you will need to read the text of each link and change the value of the <code>href</code> attribute of the <code>&lt;a&gt;</code> element. You will also need to create a <code>title</code> attribute (which creates a tooltip effect) for each link.</p></li>
+		<li><strong>Wipe out</strong> the existing list of terms and <em>dynamically create</em> new <code>&lt;a&gt;</code> elements by reading values from an array.<p>The array will store values for the name of the term to look up on Wikipedia, for the clickable text, and commentary.</p><p>Example: <em>Document_Object_Model</em> is the term to look up, <em>Document Object Model</em> is the clickable text, and  <em>&ldquo;the Document Object Model is the way JavaScript sees its containing HTML page and browser state&rdquo;</em> is the comnmentary.</p><p>You will also place all of the JavaScript and CSS in external files.</p></li>
+		<li>Load the data about the links in from a <em>local</em> XML file.</li>
+		<li>Load the link data from a <em>remote JSON</em> file that is hosted on your professor's server.</li>
+	</ol>
+	<h2>Click to see the Wikipedia definition of each term</h2>
+	<ul id="terms">
+		<li><a href="#">Document_Object_Model</a>  - &ldquo;the Document Object Model is the way JavaScript sees its containing HTML page and browser state.&rdquo;</li>
+		<li><a href="#">DOM_scripting</a> - what are some of the destinctions between DOM scripting and DHTML?</li>
+		<li><a href="#">Ajax_(programming)</a> - note the difference between AJAX and Ajax.</li>
+		<li><a href="#">XML</a> - what is the difference between a <em>well-formed</em> and a <em>valid</em> XML document?</li>
+		<li><a href="#">JSON</a> - Which is faster, XML or JSON?</li>
+		<li><a href="#">Javascript</a> - </li>
+		<li><a href="#">Screen_scraping</a> - </li>
+		<li><a href="#">RSS</a> - </li>
+		<li><a href="#">History_of_web_syndication_technology</a> - </li>
+		<li><a href="#">Rich_Internet_application</a> - </li>
+		<li><a href="#">Client-side_scripting</a> - </li>
+		<li><a href="#">Server-side_scripting</a> - </li>
+		<li><a href="#">Web_application_framework</a> - </li>
+		<li><a href="#">Semantic_web</a> - </li>
+		<li><a href="#">Web_design</a> - </li>
+		<li><a href="#">Web_standards</a> - </li>
+		<li><a href="#">Web_2.0</a> - </li>
+		<li><a href="#">Service-oriented_architecture</a> - </li>
+		<li><a href="#">SOAP</a> - </li>
+		<li><a href="#">Mashup_(web_application_hybrid)</a> - </li>
+		<li><a href="#">Representational_State_Transfer</a> - </li>
+		<li><a href="#">Data_mining</a> - </li>
+		<li><a href="#">Recommendation_system</a> - </li>
+		
+		
+	</ul>
+</div>
+</body>
+</html>

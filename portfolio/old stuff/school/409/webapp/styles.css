@@ -1,0 +1,52 @@
+body
+{
+background-image:url('images/back.bmp');
+background-repeat:repeat-x;
+
+}
+
+#content{
+font-family:verdana;
+text-align:center;
+border-radius: 15px;
+width:900px;
+height:1500px;
+margin:25px auto 25px auto;
+background-color: white;
+opacity:0.6;
+border:medium solid black;
+}
+
+#left
+{
+float:left;
+width: 200px;
+border-bottom:thin solid black;
+border-right:thin solid black;
+border-top:thin solid black;
+}
+
+#center
+{
+float:left;
+width: 500px;
+height:800px;
+}
+
+#right
+{
+float:right;
+width: 190px;
+height:800px;
+border-left: thin solid black;
+border-top: thin solid black;
+border-bottom: thin solid black;
+}
+
+#chooser
+{
+margin: 0px auto 0px auto;
+background-color:#35C0CD;
+width:95%;
+height:300px;
+}

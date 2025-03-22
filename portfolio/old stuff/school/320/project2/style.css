@@ -1,0 +1,179 @@
+*{
+padding:0px;
+margin:0px;
+}
+img{
+padding:20px;
+}
+p{
+margin:20px 10px 10px 10px;
+font-family:Oxygen;
+text-align:justify;
+}
+li{
+font-family:Oxygen;
+}
+body{
+background-color:white;
+color: black;
+background-image:url('media/backgradient.jpg');
+background-repeat: repeat-x;
+}
+em{
+font-weight:bold;
+}
+a{
+color:blue;
+text-decoration:none;
+}
+a:hover{
+color:red;
+border-bottom:thin dotted black;
+}
+h1, h2, h3, h4, h5, h6{
+margin: 10px 0 25px 10px;
+font-family:Montserrat;
+}
+#banner{
+margin:25px auto 0 auto;
+width:900px;
+padding:0px;
+}
+#banner img{
+margin:0px;
+padding:0px;
+}
+#wrapper{
+width:900px;
+margin:15px auto 25px auto;
+border: thin solid gray;
+background-color:white;
+min-height:400px;
+}
+#navdiv{
+width:900px;
+height:45px;
+background-image: url('nav1.png');
+background-repeat: repeat-x;
+margin: 10px auto 0 auto;
+border:thin solid gray;
+}
+#navdiv a{
+font-family:	Arial,"Helvetica Neue",Helvetica,sans-serif;
+font-size:	17px;
+font-weight:	700;
+color: white;
+text-decoration:none;
+border-right:thin solid white;
+padding:0px 10px;
+}
+#navdiv a:hover{
+color:red;
+background-color:black;
+}
+#currentnav a{
+color:red;
+background-color:black;
+}
+#ref_links{
+margin-left:10px;
+margin-bottom:25px;
+list-style-type:none;
+}
+#ref_links li a{
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+color:blue;
+}
+#ref_links a:hover{
+color:red;
+border-bottom:thin dotted black;
+}
+.refexpl{
+margin: 0 0 0 30px;
+}
+.menu{
+	list-style: none outside none;
+    position: relative;
+    z-index: 50;
+}
+.menu li {
+	font-size:28px;
+    float: left;
+    position: relative;
+}
+.floatleft{
+float:left;
+}
+.floatright{
+float:right;
+}
+.textleft{
+text-align: left;
+}
+.textright{
+text-align: right;
+}
+.textcenter{
+text-align: center;
+}
+.clear{
+clear:both;
+}
+.caption{
+margin:-10px;
+padding-bottom:10px;
+text-align:center;
+font-weight:bold;
+}
+.vidblock{
+width:880px;
+margin:25px auto 50px auto;
+}
+.vidcaption{
+width: 450px;
+}
+.newsItemTitle{
+color:blue;
+font-size:20px;
+font-weight:bold;
+margin-left:10px;
+text-decoration:none;
+}
+.newsItemTitle:hover{
+color:red;
+border-bottom: thin dotted black;
+}
+.specs{
+width:350px;
+}
+.specs li{
+margin-left:30px;
+}
+.specs a{
+margin-left:10px;
+}
+#prodfeed{
+width:550px;
+border-left: thin solid black;
+}
+#prodfeed a{
+margin-left:10px;
+color: blue;
+font-weight:bold;
+text-decoration:none;
+text-align:center;
+}
+#prodfeed a:hover{
+color:red;
+border-bottom:thin dotted black;
+}
+#prodfeed em{
+margin-left:10px;
+}
+
+#content h3{
+margin:0px;
+padding:10px;
+}

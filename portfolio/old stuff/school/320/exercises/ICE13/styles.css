@@ -1,0 +1,96 @@
+/* "Where am I now?" style */
+#navlist li a#current{
+	background-color:red;
+	
+}
+#navlist{
+background-color:rgb(0,51,102);
+}
+
+	#navlist li 
+{
+display: inline;
+list-style-type: none;
+border-right:thin solid white;
+}
+
+#navlist a{
+padding-right:  20px;
+padding-left:  20px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+
+}
+	
+/* Navigation related styles */
+/* Add your styles here */
+
+
+
+/* Don't change the styles below (unless you really want to) */
+/* Layout and content related styles */
+body{  
+		font-family: verdana, sans-serif; 
+	
+		font-size: small;
+	
+		margin: 0;
+	padding: 0;
+	}
+	
+
+ul#stories{ 
+		padding: 0px;
+	}
+
+
+	
+	
+ul#stories li {    
+		list-style: none;
+	
+		margin: 10px 0; 
+	}
+
+
+	
+	#banner{
+		margin-left:15px;
+	}
+	
+	#container{
+		width:750px;
+		border:1px solid black;
+		background-image: url(2col_bkgd.gif);
+		background-repeat: repeat-y;
+	}
+
+	
+	#header{
+		padding-top:15px;
+		padding-bottom:21px;
+		background-color:#CCC;
+	}
+	
+	#footer{
+		clear:both;
+		padding:15px;
+		background:#ccc;
+	}
+	
+	#main{
+		float:right;
+		width:530px;
+		margin: 0 10px;
+	}
+	
+	#extras{
+		margin-left:10px;
+	}
+	
+
+	
+	
+	
+	

@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Oxygen";
+    overflow:  hidden !important;
+}
+
+
+.container #map .leaflet-control-zoom.leaflet-bar.leaflet-control{
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    margin: 0;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.container .leaflet-control-attribution.leaflet-control{
+    display: none;
+}
+
+.container {
+    background: #000;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+.expand-button i{
+    margin-right:  5px;
+}
+head{
+    display: none !important;
+}
+
+#map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.expand-button{
+    cursor: pointer;
+    z-index: 500;
+    position: absolute;
+    color: #eee;
+    text-align: center;
+    top: 25px;
+    left: 15px;
+    width: 90px;
+    height: 20px;
+    border-radius: 8px;
+    background: #1e5799;
+    padding: 10px;
+    background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 96%, #7db9e8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(96%,#207cca), color-stop(100%,#7db9e8));
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 96%,#7db9e8 100%);
+    background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 96%,#7db9e8 100%);
+    background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 96%,#7db9e8 100%);
+    background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 96%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+}
+
+.expand-button .drop-down{
+    position: absolute;
+    display: none;
+    left: 0;
+    border-radius: 8px;
+    top: 100%;
+    z-index: -1;
+    text-align: center;
+    background: rgba( 100, 100, 100, 0.8);
+    padding-bottom: 20px;
+		
+}
+
+.expand-button .drop-down span{
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.expand-button .drop-down .switch-wrapper{
+    padding: 0;    
+    display: block;
+	border-bottom: thin solid #999;
+	padding-bottom: 4px;
+	margin: 0 auto;
+	text-align: center;
+
+	
+}
+.expand-button .drop-down .switch-wrapper:last-child{
+		border-bottom: none;
+}

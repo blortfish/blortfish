@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<!--  	
+	Follow the directions. There WILL be partial credit for all parts BUT the extra credit!
+			
+	Remember that I'll be testing this ONLY in Chrome!
+	-->
+	<title>practical-JS</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1" baseProfile="full" width="100%" height="100%">  
+
+ <script type="text/javascript">
+ <![CDATA[
+	// You'll need these!
+	var xlinkns = "http://www.w3.org/1999/xlink";
+	var svgns="http://www.w3.org/2000/svg";
+	
+	/*  
+	2) All in this part must happen/be assigned when the document is loaded:
+	Create an image element that has
+		-a x value of 75px
+		-a y value of 125px
+		-a height of 200px
+		-a width of 850px
+		-shows the svgOpen.png
+	
+	Alter the title text you created in part 1 below so that:
+		-it's embedded inside of an 'a' tag (dynamically created <a> of course!)
+		-when the title text is clicked, the <a> takes you to http://www.w3.org/Graphics/SVG/ 
+				(using the <a> tag - do NOT try to go to the other page via JavaScript)
+		-when the title is moused over the text changes to "Click to go to W3C's SVG page"
+		-when the title is moused out the text changes back to "Your Name's Practical"
+		
+	You MUST use namespaces for for credit
+	*/
+	
+	/*
+	Extra Credit:  (be sure you are done with all else before you try this!)
+	When I click on the dynamically created image above, dynamically create an ellipse
+	that animates...
+	ellipse: cx random value between 0 and 100%
+			 cy random value between 0 and 100%
+			 rx random value between 50 and 140
+			 ry random value between 30 and 40
+			 stroke width random value between 1 and 8
+			 fill #ccffff
+			 stroke #663399
+	animate: 1 to 0 opacity
+			 duration random value between 1 and 6
+			 when 0 is reached, remove the ellipse
+			 animate begins on the creation
+	(any part of this is wrong, and you don't get the point)
+	*/
+
+ ]]>
+ </script>
+	<!-- 
+	1) Everything below here is to be created as tags, NOT dynamically created...
+	Create a background that covers the WHOLE page (no matter how big) that is #333366.
+	-->
+  
+  <!-- 
+  Create a title with "[your name]'s practical!" - like (Joe's Practical!)
+    at x of 150px, y of 75px, the color (#999966) and font size (48px)
+	--> 
+  
+  <!-- 
+  Create a rect that has:
+	x of 50px, y of 100px, width of 0, height of 0, fill of #ffffcc
+	and rounded corners of 25px!
+	
+	Now, animate it so that the rect's
+	-width grows to 80% over 2 seconds
+	-height grows to 80% over 4 seconds
+	-rotation rotates once around 1 second AFTER the height animate is done (MUST watch the 
+	height's id to see when it is done, NOT by time).  It should take the rotation 1.5 seconds
+	to complete
+	-->
+
+</svg>
+</body>
+</html>

@@ -1,0 +1,44 @@
+#banner{
+background-image:url('banner.jpg');
+width:700px;
+height:250px;
+}
+body{
+background-color:#7FFF00;
+}
+#this_page{
+font-weight: bolder;
+}
+#nav_list{
+margin:0px;
+padding:0px;
+background-color:rgb(200,200,200);
+width:700px;
+}
+#nav_list li{
+font-family:Helvetica;
+font-size:24px;
+display:inline;
+padding-left:6px;
+padding-right:12px;
+}
+h1{
+font-size: 32px;
+font-family:Arial;
+color:red;
+}
+p{
+font-size:20px;
+font-family:Verdana;
+}
+.finaltable{
+width:500px;
+font-family:Times;
+}
+a{
+text-decoration:none;
+color:black;
+}
+a:hover{
+color:white;
+}

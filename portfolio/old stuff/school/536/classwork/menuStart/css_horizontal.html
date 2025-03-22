@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8' />
+	<title>CSS Horizontal Menu</title>
+	<!--code for this example extracted out of an article from alistapart.com
+	check out the article at http://www.alistapart.com/articles/dropdowns-->
+	<style>
+		body {
+			font-family: arial, helvetica, serif;
+			background: white;
+			padding: 2em;
+			margin: 0;
+		}
+		
+		a {text-decoration: none;}
+		
+		a:link {color: #080;}
+		
+		a:visited {color: #790;}
+		
+		a:active {color: red;}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			background:#ffffff;  /*Why?  Because IE doesn't fill in the space (and sucks)*/
+		}
+		
+		#nav a {
+			font-weight: bold;
+			color: green;
+			text-decoration: none;
+		}
+		
+		#nav li li a {
+			display: block;
+			font-weight: normal;
+			color: #060;
+			padding: 0.2em 10px;
+		}
+		
+		#nav li li a:hover {
+			padding: 0.2em 5px;
+			border: 5px solid #7d6340;
+			border-width: 0 5px;
+			cursor:pointer;
+		}
+		
+		li {
+			float: left;
+			position: relative;
+			width: 10em;
+			text-align: center;
+			cursor: default;
+			background-color: white;
+			border: 1px solid #7d6340;
+			border-width: 0px 0px 1px 0px;
+		}
+		
+		li ul, li li ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			width:10em;
+			font-weight: normal;
+			padding: 0.5em 0 1em 0;
+			border: solid 1px #7d6340;
+		}
+		
+		li>ul {
+			top: auto;
+			left: auto;
+		}
+		
+		li li {
+			display: block;
+			float: none;
+			background-color: white;
+			border: 0;
+		}
+		
+		li:hover ul
+		{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+	<ul id="nav">
+	
+		<li>
+			<div><a href="">Main I</a></div>
+			<ul>
+				<li><a href="">Choice I</a></li>
+				<li><a href="">Choice II</a></li>
+				<li><a href="">Choice III</a></li>
+			</ul>
+		</li>
+	
+		<li>
+			<div><a href="">Main II</a></div>
+			<ul>
+				<li><a href="">Choice IV</a></li>
+				<li><a href="">Choice V</a></li>
+				<li><a href="">Choice VI</a></li>
+			</ul>
+		</li>
+	
+		<li>
+			<div><a href="">Main III</a></div>
+			<ul>
+				<li><a href="">Choice VII</a></li>
+				<li><a href="">Choice VIII</a></li>
+				<li><a href="">Choice IV</a></li>
+			</ul>
+		</li>
+	
+	</ul>
+
+</body>
+</html>

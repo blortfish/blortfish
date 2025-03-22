@@ -1,0 +1,9 @@
+.wires{
+	width: 100%;
+	text-align:center;
+}	
+
+.wires img{
+	display: inline-block;
+	margin: 5px;
+}

@@ -1,0 +1,10 @@
+<script type="text/javascript">
+
+function tagit()
+{
+	alert("I am an alert box!");
+}
+
+$(document).ready(tagit); 
+	
+</script>
