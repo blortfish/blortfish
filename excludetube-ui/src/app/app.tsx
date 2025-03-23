@@ -1,37 +1,22 @@
-import { Route, Routes, Link } from 'react-router-dom';
 import PostList from './components/PostList';
 import './app.css';
+import { useEffect } from 'react';
 
 export function App() {
+  // Apply dark mode by default
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
+
   return (
-    <div>
-      <h1>ExcludeTube UI</h1>
-
-      <div role="navigation">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/posts">Posts</Link>
-          </li>
-        </ul>
+    <div className="dark:bg-dark-900 min-h-screen p-6 text-gray-800 dark:text-gray-200">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl font-bold mb-4 dark:text-gray-100">ExcludeTube UI</h1>
+        <div>
+          <h2 className="text-2xl font-semibold mb-6 dark:text-gray-200">Welcome to ExcludeTube</h2>
+          <PostList />
+        </div>
       </div>
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <h2>Welcome to ExcludeTube</h2>
-              <p>
-                <Link to="/posts">View all posts</Link>
-              </p>
-            </div>
-          }
-        />
-        <Route path="/posts" element={<PostList />} />
-      </Routes>
     </div>
   );
 }

@@ -1,4 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* You can add global styles to this file, and also import other style files */
+
+/* Dark theme styles */
+@layer base {
+  body {
+    @apply antialiased;
+  }
+  
+  .dark {
+    color-scheme: dark;
+  }
+  
+  html.dark body {
+    @apply bg-dark-900;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .hover\:scale-102:hover {
+    transform: scale(1.02);
+  }
+}
