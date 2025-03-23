@@ -56,8 +56,6 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 // Posts is the resolver for the posts field.
 func (r *queryResolver) Posts(ctx context.Context) ([]*model.Post, error) {
     // Read the JSON file
-    fmt.Printf("abddddc")
-    fmt.Printf("")
     jsonFile, err := os.Open("./mongo-data/posts.json")
     if err != nil {
         return nil, fmt.Errorf("failed to open file: %v", err)

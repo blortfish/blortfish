@@ -1,48 +1,37 @@
-import NxWelcome from './nx-welcome';
-
 import { Route, Routes, Link } from 'react-router-dom';
+import PostList from './components/PostList';
+import './app.css';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="excludetube-ui" />
+      <h1>ExcludeTube UI</h1>
 
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
       <div role="navigation">
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/page-2">Page 2</Link>
+            <Link to="/posts">Posts</Link>
           </li>
         </ul>
       </div>
+
       <Routes>
         <Route
           path="/"
           element={
             <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
+              <h2>Welcome to ExcludeTube</h2>
+              <p>
+                <Link to="/posts">View all posts</Link>
+              </p>
             </div>
           }
         />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
+        <Route path="/posts" element={<PostList />} />
       </Routes>
-      {/* END: routes */}
     </div>
   );
 }
