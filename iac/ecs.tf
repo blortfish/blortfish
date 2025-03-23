@@ -89,6 +89,14 @@ resource "aws_security_group" "ecs_sg" {
     description = "HTTP access"
   }
 
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+    description = "Public API access on port 8080"
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -200,31 +208,45 @@ resource "aws_ecr_repository" "main" {
   }
 }
 
-# ECS Task Definition for Hello World
-resource "aws_ecs_task_definition" "hello_world" {
-  family                   = "${var.project_name}-hello-world"
+# ECS Task Definition for ExcludeTube API
+resource "aws_ecs_task_definition" "excludetube_api" {
+  family                   = "${var.project_name}-excludetube-api"
   network_mode             = "bridge"
   requires_compatibilities = ["EC2"]
   execution_role_arn       = aws_iam_role.ecs_execution_role.arn
-  memory = 128
+  memory                   = 512
+  cpu                      = 256
   container_definitions = jsonencode([
     {
-      name      = "hello-world"
-      image     = "public.ecr.aws/docker/library/hello-world:latest"
+      name      = "excludetube-api"
+      image     = "${aws_ecr_repository.main.repository_url}:latest"
       essential = true
       portMappings = [
         {
-          containerPort = 80
+          containerPort = 8080
           hostPort      = 80
           protocol      = "tcp"
         }
       ]
+      environment = [
+        {
+          name  = "ENV",
+          value = "production"
+        }
+      ],
+      healthCheck = {
+        command     = ["CMD-SHELL", "wget --no-verbose --spider http://localhost:8080 || exit 1"]
+        interval    = 30
+        timeout     = 5
+        retries     = 3
+        startPeriod = 10
+      }
       logConfiguration = {
         logDriver = "awslogs"
         options = {
-          "awslogs-group"         = aws_cloudwatch_log_group.hello_world.name
+          "awslogs-group"         = aws_cloudwatch_log_group.excludetube_api.name
           "awslogs-region"        = var.aws_region
-          "awslogs-stream-prefix" = "hello-world"
+          "awslogs-stream-prefix" = "excludetube-api"
         }
       }
     }
@@ -254,17 +276,17 @@ resource "aws_iam_role_policy_attachment" "ecs_execution_role" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
 
-# CloudWatch Log Group for Hello World
-resource "aws_cloudwatch_log_group" "hello_world" {
-  name              = "/ecs/${var.project_name}/hello-world"
+# CloudWatch Log Group for ExcludeTube API
+resource "aws_cloudwatch_log_group" "excludetube_api" {
+  name              = "/ecs/${var.project_name}/excludetube-api"
   retention_in_days = 7
 }
 
-# ECS Service for Hello World
-resource "aws_ecs_service" "hello_world" {
-  name            = "${var.project_name}-hello-world"
+# ECS Service for ExcludeTube API
+resource "aws_ecs_service" "excludetube_api" {
+  name            = "${var.project_name}-excludetube-api"
   cluster         = aws_ecs_cluster.main.id
-  task_definition = aws_ecs_task_definition.hello_world.arn
+  task_definition = aws_ecs_task_definition.excludetube_api.arn
   desired_count   = 1
   launch_type     = "EC2"
 
