@@ -4,5 +4,22 @@
   "sourceRoot": "portfolio/src",
   "projectType": "application",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "deploy": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "self"
+        },
+        {
+          "target": "test",
+          "projects": "self"
+        }
+      ],
+      "options": {
+        "command": "aws sso login --profile dflint && AWS_PROFILE=dflint aws s3 sync ./dist/portfolio s3://danielflint.com --acl private"
+      }
+    }
+  }
 }
