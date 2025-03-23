@@ -70,3 +70,9 @@ variable "cloudfront_price_class" {
   type        = string
   default     = "PriceClass_100" # US and Europe only (cheapest)
 }
+
+variable "target_ids" {
+  description = "List of target IDs to attach to the target group (e.g., EC2 instance IDs)"
+  type        = list(string)
+  default     = []
+}

@@ -19,7 +19,7 @@
         }
       ],
       "options": {
-        "command": "aws sso login --profile dflint && AWS_PROFILE=dflint aws s3 sync ./dist/portfolio s3://danielflint.com --acl private"
+        "command": "aws sso login --profile dflint && AWS_PROFILE=dflint aws s3 sync ./dist/portfolio s3://dflint-portfolio --acl private"
       }
     }
   }

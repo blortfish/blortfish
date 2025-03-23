@@ -18,6 +18,11 @@ output "cloudfront_distribution_domain_name" {
   value       = aws_cloudfront_distribution.site.domain_name
 }
 
+output "cloudfront_hosted_zone_id" {
+  description = "Zone id of the CloudFront distribution"
+  value       = aws_cloudfront_distribution.site.hosted_zone_id
+}
+
 output "acm_certificate_arn" {
   description = "ARN of the ACM certificate"
   value       = aws_acm_certificate.site.arn

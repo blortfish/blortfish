@@ -13,6 +13,11 @@ output "target_group_arn" {
   value       = aws_lb_target_group.api.arn
 }
 
+output "target_group_name" {
+  description = "Name of the ALB target group"
+  value       = aws_lb_target_group.api.name
+}
+
 output "security_group_id" {
   description = "ID of the ALB security group"
   value       = aws_security_group.alb.id

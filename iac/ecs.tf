@@ -97,6 +97,15 @@ resource "aws_security_group" "ecs_sg" {
     description = "Public API access on port 8080"
   }
 
+  # Allow traffic from ALB security group
+  ingress {
+    description     = "Allow traffic from ALB"
+    from_port       = 8080
+    to_port         = 8080
+    protocol        = "tcp"
+    security_groups = [module.excludetube_api.security_group_id]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
