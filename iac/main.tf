@@ -1,6 +1,7 @@
 provider "aws" {
-  region = "us-east-1"
+  region = var.aws_region
 }
+
 
 locals {
   portfolio_origin_id = "portfolio"
