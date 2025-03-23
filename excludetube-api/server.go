@@ -40,6 +40,11 @@ func main() {
 
 	router.Handle("/query", srv)
 
+	router.Get("/healthcheck", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("OK"))
+	})
+
 	print("gql running at http://localhost:8080")
 	err := http.ListenAndServe(":8080", router)
 	if err != nil {

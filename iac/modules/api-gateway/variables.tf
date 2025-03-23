@@ -32,7 +32,7 @@ variable "container_port" {
 variable "health_check_path" {
   description = "Path for the health check"
   type        = string
-  default     = "/"
+  default     = "/healthcheck"
 }
 
 variable "enable_deletion_protection" {

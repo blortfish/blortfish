@@ -207,61 +207,6 @@ resource "aws_autoscaling_group" "ecs" {
   }
 }
 
-# ECR Repository
-resource "aws_ecr_repository" "main" {
-  name                 = var.ecr_repository_name
-  image_tag_mutability = "MUTABLE"
-
-  image_scanning_configuration {
-    scan_on_push = true
-  }
-}
-
-# ECS Task Definition for ExcludeTube API
-resource "aws_ecs_task_definition" "excludetube_api" {
-  family                   = "${var.project_name}-excludetube-api"
-  network_mode             = "bridge"
-  requires_compatibilities = ["EC2"]
-  execution_role_arn       = aws_iam_role.ecs_execution_role.arn
-  memory                   = 512
-  cpu                      = 256
-  container_definitions = jsonencode([
-    {
-      name      = "excludetube-api"
-      image     = "${aws_ecr_repository.main.repository_url}:latest"
-      essential = true
-      portMappings = [
-        {
-          containerPort = 8080
-          hostPort      = 80
-          protocol      = "tcp"
-        }
-      ]
-      environment = [
-        {
-          name  = "ENV",
-          value = "production"
-        }
-      ],
-      healthCheck = {
-        command     = ["CMD-SHELL", "wget --no-verbose --spider http://localhost:8080 || exit 1"]
-        interval    = 30
-        timeout     = 5
-        retries     = 3
-        startPeriod = 10
-      }
-      logConfiguration = {
-        logDriver = "awslogs"
-        options = {
-          "awslogs-group"         = aws_cloudwatch_log_group.excludetube_api.name
-          "awslogs-region"        = var.aws_region
-          "awslogs-stream-prefix" = "excludetube-api"
-        }
-      }
-    }
-  ])
-}
-
 # IAM Role for ECS Task Execution
 resource "aws_iam_role" "ecs_execution_role" {
   name = "${var.project_name}-ecs-execution-role"
@@ -291,15 +236,4 @@ resource "aws_cloudwatch_log_group" "excludetube_api" {
   retention_in_days = 7
 }
 
-# ECS Service for ExcludeTube API
-resource "aws_ecs_service" "excludetube_api" {
-  name            = "${var.project_name}-excludetube-api"
-  cluster         = aws_ecs_cluster.main.id
-  task_definition = aws_ecs_task_definition.excludetube_api.arn
-  desired_count   = 1
-  launch_type     = "EC2"
 
-  depends_on = [
-    aws_autoscaling_group.ecs
-  ]
-}
