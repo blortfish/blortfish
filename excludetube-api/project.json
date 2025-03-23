@@ -14,7 +14,14 @@
     "serve": {
       "executor": "@nx-go/nx-go:serve",
       "options": {
-        "main": "{projectRoot}/server.go"
+        "main": "{projectRoot}/server.go",
+        "command": "air"
+      }
+    },
+    "watch": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "air"
       }
     },
     "test": {

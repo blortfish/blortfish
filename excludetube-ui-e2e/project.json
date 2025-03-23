@@ -1,0 +1,10 @@
+{
+  "name": "excludetube-ui-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "excludetube-ui-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["excludetube-ui"],
+  "// targets": "to see all targets run: nx show project excludetube-ui-e2e --web",
+  "targets": {}
+}
