@@ -6,10 +6,9 @@
 
   <link rel="stylesheet" href="/src/styles.css" />
   <title>Daniel E. Flint</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background: #0a0a0a;
+      background: rgb(17, 24, 39);
       overflow: hidden;
     }
 
@@ -23,104 +22,79 @@
     }
   </style>
 </head>
-<body class="bg-gray-900 text-white relative flex flex-col min-h-screen justify-center items-center">
+<body>
+  <canvas id="backgroundCanvas"></canvas>
+  <div id="root"></div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script>
+    const canvas = document.getElementById('backgroundCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-<canvas id="backgroundCanvas"></canvas>
-
-<header class="text-center p-10 bg-gradient-to-r from-blue-500 to-green-600 shadow-lg relative w-full">
-  <h1 class="text-5xl font-extrabold">Daniel Flint</h1>
-  <p class="text-gray-200 mt-2 text-xl">Full-Stack Engineer</p>
-  <div class="flex justify-center space-x-4 mt-4">
-    <a href="https://github.com/blortfish" target="_blank" class="text-white text-4xl hover:text-gray-300">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://linkedin.com/in/daniel-flint-8815544b" target="_blank"
-       class="text-white text-4xl hover:text-gray-300">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="/Flint_Daniel.pdf" target="_blank" class="text-white text-4xl hover:text-gray-300">
-      <i class="fa-solid fa-file"></i>
-    </a>
-  </div>
-</header>
-
-<main class="flex flex-col items-center justify-start flex-grow relative text-center px-4 py-[10%]">
-  <h2 class="text-3xl font-bold text-white mb-4">Tools I Work With</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-gray-300 text-lg py">
-    <span>JavaScript</span>
-    <span>TypeScript</span>
-    <span>Node.js</span>
-    <span>React</span>
-    <span>GraphQL</span>
-    <span>AWS</span>
-    <span>Docker</span>
-    <span>Terraform</span>
-    <span>PostgreSQL</span>
-    <span>MongoDB</span>
-    <span>Redis</span>
-    <span>CI/CD</span>
-    <span>Nx</span>
-    <span>Python</span>
-    <span>Github Actions</span>
-    <span>git</span>
-  </div>
-</main>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-<script>
-  const canvas = document.getElementById('backgroundCanvas');
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  let points = [];
-  const numPoints = window.innerWidth * .15;
-
-  for (let i = 0; i < numPoints; i++) {
-    points.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      dx: (Math.random() - 0.5) * 1.5,
-      dy: (Math.random() - 0.5) * 1.5
-    });
-  }
-
-  function drawLines() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
-    ctx.lineWidth = 0.5;
-
-    for (let i = 0; i < points.length; i++) {
-      let p1 = points[i];
-      for (let j = i + 1; j < points.length; j++) {
-        let p2 = points[j];
-        let dist = Math.hypot(p2.x - p1.x, p2.y - p1.y);
-        if (dist < 150) {
-          ctx.beginPath();
-          ctx.moveTo(p1.x, p1.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.stroke();
-        }
-      }
-
-      p1.x += p1.dx;
-      p1.y += p1.dy;
-
-      if (p1.x < 0 || p1.x > canvas.width) p1.dx *= -1;
-      if (p1.y < 0 || p1.y > canvas.height) p1.dy *= -1;
+    // Set canvas background to match body
+    function setCanvasBackground() {
+      ctx.fillStyle = 'rgb(17, 24, 39)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
-  }
 
-  function animate() {
-    drawLines();
-    setTimeout(() => {
-      requestAnimationFrame(animate)
-    }, 20)
-  }
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      setCanvasBackground();
+    });
 
-  animate();
-</script>
-<div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
+    let points = [];
+    const numPoints = window.innerWidth * .15;
+
+    for (let i = 0; i < numPoints; i++) {
+      points.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        dx: (Math.random() - 0.5) * 1.5,
+        dy: (Math.random() - 0.5) * 1.5
+      });
+    }
+
+    function drawLines() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      setCanvasBackground();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.lineWidth = 0.5;
+
+      for (let i = 0; i < points.length; i++) {
+        let p1 = points[i];
+        for (let j = i + 1; j < points.length; j++) {
+          let p2 = points[j];
+          let dist = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+
+        p1.x += p1.dx;
+        p1.y += p1.dy;
+
+        if (p1.x < 0 || p1.x > canvas.width) p1.dx *= -1;
+        if (p1.y < 0 || p1.y > canvas.height) p1.dy *= -1;
+      }
+    }
+
+    function animate() {
+      drawLines();
+      setTimeout(() => {
+        requestAnimationFrame(animate)
+      }, 20)
+    }
+
+    setCanvasBackground();
+    animate();
+  </script>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

@@ -1,9 +1,11 @@
-import NxWelcome from './nx-welcome';
+import Header from './components/Header';
+import ToolsSection from './components/ToolsSection';
 
 export function App() {
   return (
-    <div>
-      hi
+    <div className="text-white relative flex flex-col min-h-screen justify-center items-center" style={{ background: 'transparent' }}>
+      <Header />
+      <ToolsSection />
     </div>
   );
 }
