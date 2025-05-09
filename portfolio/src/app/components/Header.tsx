@@ -11,7 +11,7 @@ export function Header() {
            className="text-white text-4xl hover:text-gray-300">
           <i className="fab fa-linkedin"></i>
         </a>
-        <a href="/Flint_Daniel.pdf" target="_blank" className="text-white text-4xl hover:text-gray-300">
+        <a href="https://s3.amazonaws.com/guild.gun.io/media/resumes/Resume_NJPQCPn.pdf" target="_blank" className="text-white text-4xl hover:text-gray-300">
           <i className="fa-solid fa-file"></i>
         </a>
       </div>

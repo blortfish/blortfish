@@ -19,7 +19,7 @@
         }
       ],
       "options": {
-        "command": "aws sso login --profile dflint && AWS_PROFILE=dflint aws s3 sync ./dist/portfolio s3://dflint-portfolio --acl private"
+        "command": "aws sso login --profile dflint && AWS_PROFILE=dflint aws s3 sync ./dist/portfolio s3://dflint-portfolio --acl private && aws cloudfront create-invalidation --distribution-id E3AN59FP9NQPKI --paths \"/*\" | jq"
       }
     }
   }
