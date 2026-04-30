@@ -1,9 +1,0 @@
-<div id="nav">
-	<ul>
-		<li><a href="http://people.rit.edu/def6054/426/">What is it</a></li>
-		<li><a href="http://people.rit.edu/def6054/426/why">Why S.A.R.A.</a></li>
-		<li><a href="http://people.rit.edu/def6054/426/how">How does it Work</a></li>
-		<li><a href="http://people.rit.edu/def6054/426/try">Try the Interface</a></li>
-		<li id="last"><a href="http://people.rit.edu/def6054/426/company">Company</a></li>
-	</ul>
-</div>

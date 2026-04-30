@@ -1,8 +1,0 @@
-[build]
-cmd = "go build -o server server.go"
-bin = "server"
-include = ["*.go", "graph/schema.graphqls"]
-exclude = ["assets", "vendor"]
-
-[log]
-time = true

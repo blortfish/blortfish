@@ -1,3 +1,0 @@
-<div id="banner">
-    <img src="http://people.rit.edu/def6054/426/global/media/images/banner.png" alt="Logo"/>
-</div>

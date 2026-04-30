@@ -1,2 +1,0 @@
-<script type="text/javascript" src="http://people.rit.edu/def6054/426/global/javascript/jquery.js"></script>
-<script type="text/javascript" src="http://people.rit.edu/def6054/426/global/javascript/paragraphs.js"></script>

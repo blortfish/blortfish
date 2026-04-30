@@ -1,2 +1,0 @@
-<link rel="icon" type="image/png" href="global/media/favicon.png" />
-<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>

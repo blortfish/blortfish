@@ -1,1 +1,0 @@
-<link rel="stylesheet" type="text/css" href="http://people.rit.edu/def6054/331/project2/global/style_sheets/main.css" />

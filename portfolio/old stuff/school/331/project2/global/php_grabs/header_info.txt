@@ -1,2 +1,0 @@
-<link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-<link rel="icon" type="image/png" href="http://people.rit.edu/def6054/331/project2/global/media/favico.png" />
